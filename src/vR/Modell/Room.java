@@ -373,29 +373,29 @@ public class Room implements PropertyChangeInterface
 	
 	private static PaneeleGrooveSet blendPaneelsGrooves = new PaneeleGrooveSet();
 
-	public PaneeleFeatherSet getBlendPaneelsGroove()
+	public PaneeleGrooveSet getBlendPaneelsGroove()
 	{
-		return blendPaneelsFeathers;
+		return blendPaneelsGrooves;
 	}
 
 	public void setBlendPaneelGrooves(PaneeleGrooveSet blendPaneelsGroove)
 	{
-		this.blendPaneelsFeathers = blendPaneelsFeathers;
+		blendPaneelsGrooves = blendPaneelsGroove;
 	}
 	
 	public void addBlendPaneelsGroove(PaneeleGroove blend)
 	{
-		//if(!blendPaneelsGrooves.contains(blend))
-		{System.out.println("fu");
-			blendPaneelsGrooves.add(blend);
+		if(!blendPaneelsGrooves.contains(blend)){
+		System.out.println("fu");
+		blendPaneelsGrooves.add(blend);
 		}
 	}
 	
 	public void removeBlendPaneelGrooves(PaneeleGroove blend)
 	{
-		if(blendPaneelsFeathers.contains(blend))
+		if(blendPaneelsGrooves.contains(blend))
 		{
-			blendPaneelsFeathers.remove(blend);
+			blendPaneelsGrooves.remove(blend);
 		}
 	}
 }
